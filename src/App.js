@@ -4,8 +4,7 @@ import ProductLists from "./views/ProductLists";
 import ProductDetail from "./views/ProductDetail";
 import About from "./views/About";
 import Navbar from "./components/Navbar";
-import 'antd/dist/antd.css';
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

@@ -5,6 +5,9 @@
 
 .product-list__img img {
   transition: 0.3s;
+  width: "100%";
+  object-fit: "cover";
+  height: "100%";
 }
 
 .product-list__img:hover img {
@@ -54,7 +57,7 @@
   position: absolute;
   bottom: 0;
   margin-top: auto;
-  margin: .5rem;
+  margin: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

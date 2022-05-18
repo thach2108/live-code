@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Rating from "../../components/Rating";
 import { BsHeart } from "react-icons/bs";
-import "./styles.css";
 import { Link } from "react-router-dom";
+import { getList } from "../../services";
+import "./styles.scss";
 
 const ProductLists = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios({
-      method: "get",
-      url: "http://localhost:3000/products",
-    })
+    getList()
       .then((response) => {
         setProducts(response.data);
       })
@@ -59,14 +56,7 @@ const ProductLists = () => {
               <div key={item.id} className="col-20">
                 <article className="products-list__article" key={item.id}>
                   <div className="product-list__img">
-                    <img
-                      src={item.small_image.url}
-                      style={{
-                        width: "100%",
-                        objectFit: "cover",
-                        height: "100%",
-                      }}
-                    />
+                    <img src={item.small_image.url} alt="product"/>
                   </div>
                   <div className="product-list__info">
                     <div className="product-list__name blue-400">

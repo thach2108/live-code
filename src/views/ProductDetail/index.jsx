@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Rating from "../../components/Rating";
 import { BsHeart } from "react-icons/bs";
-import "./styles.css";
 import { useParams } from "react-router-dom";
 import ImageGallery from "react-image-gallery";
 import { Tabs } from "antd";
+
+import "./styles.scss";
+import { getProductDetail } from "../../services";
 
 const { TabPane } = Tabs;
 
@@ -15,10 +16,7 @@ const ProductDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios({
-      method: "get",
-      url: `http://localhost:3000/products/${id}`,
-    })
+    getProductDetail(id)
       .then((response) => {
         setProduct(response.data);
       })
