@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,4 +28,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  font-size: 2.5rem;
+  padding: 1.5rem 0;
+}
+
+.discount {
+  background-color: var(--red-200);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #856247;
+}
+.ant-tabs-tab:hover {
+  color: #856247;
+}
+.ant-tabs-ink-bar {
+  background-color: #856247;
 }

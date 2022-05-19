@@ -2,11 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-      }}
-    >
+    <div className="text-center">
       <h1>Please contact our admin for more information</h1>
     </div>
   );
