@@ -1,9 +1,7 @@
-import './styles.scss'
-
 const Home = () => {
   return (
     <div>
-      <header className='header'>Our Home Website</header>
+      <header>Our Home Website</header>
     </div>
   );
 };
